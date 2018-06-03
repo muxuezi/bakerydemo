@@ -1,6 +1,7 @@
 FROM python:3.5-alpine
 
 ADD requirements/ /requirements/
+RUN apk add --no-cache jpeg-dev zlib-dev 
 RUN set -ex \
 	&& apk add --no-cache --virtual .build-deps \
 		gcc \
